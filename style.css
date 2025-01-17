@@ -1,21 +1,23 @@
 /* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
 */
 :root {
-    --color-de-fondo: #F5F5F5;
+    --color-de-fondo: #f5f5f5;
     --color-de-fondo-menu: #ffffff;
     --color-de-link: #000000;
 }
 
 body {
     background-color: var(--color-de-fondo);
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     margin: 0;
     box-sizing: border-box;
-    padding: 0;
+    padding: 0 1rem;
     line-height: 1.6;
 }
 
-ol, ul, li {
+ol,
+ul,
+li {
     list-style: none;
 }
 
@@ -27,18 +29,21 @@ a {
 /* ------------------------------ Sección Menú -------------------------------*/
 .cabecera {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+
     align-items: center;
     padding: 1rem;
     background-color: var(--color-de-fondo-menu);
 }
 
 .cabecera__logo {
-    max-width: 80px; /* Ajuste para pantallas pequeñas */
+    max-width: 22px;
+    /* Ajuste para pantallas pequeñas */
 }
 
 .cabecera__titulo {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-left: 0.5rem;
     text-align: center;
 }
 
@@ -49,23 +54,248 @@ a {
 .navegacion__elemento a {
     font-size: 0.9rem;
 }
-/* ------------------------------ Sección Presentación ------------------------------*/
 
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion {
+    position: relative;
+}
+
+.presentacion__titulo {
+    font-size: 1.375rem;
+    color: #464646;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.presentacion__subtitulo {
+    font-size: 0.875rem;
+    color: #464646;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.presentacion__foto {
+    width: 6.125rem;
+    border-radius: 100%;
+}
+
+.redes {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    gap: 8px;
+}
+
+.presentacion__animacion {
+    position: relative;
+    width: 150px;
+}
+
+.dotted-circle {
+    position: absolute;
+    bottom: 7px;
+    right: 51px;
+    opacity: 0.3;
+    animation: rotation 38s linear infinite;
+    height: 100px;
+    width: 100px;
+}
+
+/* .styled-circle {
+      fill: none;
+      stroke: rgb(0, 0, 0);
+      stroke-width: 2;
+      stroke-miterlimit: 10;
+      stroke-dasharray: 12.921, 11.9271;
+  } */
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi__titulo {
+    color: #464646;
+    font-size: 1.375rem;
+    font-weight: 700;
+}
 
+.sobre-mi__texto {
+    color: #464646;
+    font-size: 0.875rem;
+}
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades__titulo {
+    color: #464646;
+    font-size: 1.375rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
+.habilidades__lista {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.habilidades__elemento {
+    width: 9.75rem;
+}
+
+.habilidades__nombre {
+    font-size: 1rem;
+    color: #464646;
+    font-weight: 700;
+}
+
+.habilidades__icono {
+    width: 1.5rem;
+}
 
 /*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones__titulo {
+    color: #464646;
+    font-size: 1.375rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
+.aficiones__lista {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.aficiones__elemento {
+    width: 9.75rem;
+}
+
+.aficiones__nombre {
+    font-size: 1rem;
+    color: #464646;
+    font-weight: 700;
+}
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
+.formacion__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.formacion__elemento,
+div {
+    width: 100%;
+}
+
+.formacion__titulo {
+    color: #464646;
+    font-size: 1.375rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.formacion__icono {
+    width: 5.3125rem;
+}
+
+.formacion__nombre {
+    font-size: 1rem;
+    color: #464646;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.formacion__detalle {
+    font-size: 14px;
+    color: #464646;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.proyectos__titulo {
+    font-size: 1.375rem;
+    color: #464646;
+    font-weight: 700;
+    text-align: center;
+}
+
+.proyectos__nombre {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #464646;
+}
+
+.proyectos__descripcion {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #464646;
+}
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
+.contacto__titulo {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #464646;
+}
 
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto__texto {
+    font-size: 1rem;
+    color: #464646;
+    font-weight: 500;
+}
+
+.contacto__label {
+    color: #a2a2a2;
+    font-size: 0.75rem;
+}
+
+.contacto__label:focus {
+    color: #2a7ae4;
+}
+
+.contacto__campo {
+    border: none;
+    border-bottom: solid 1px #c8c8c8;
+    height: 20px;
+    margin-bottom: 32px;
+}
+
+.contacto__campo:focus {
+    outline: none;
+    border-bottom: solid 1px #2a7ae4;
+}
+
+.contacto__campo--textarea {
+    height: 8.3125rem;
+}
+
+.contacto__boton {
+    background-color: #2a7ae4;
+    height: 2.5rem;
+    width: 133px;
+    border: none;
+    color: white;
+}
+
+.contacto__boton:hover {
+    background-color: #2a7be4cb;
+}
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
@@ -95,16 +325,174 @@ a {
     .navegacion__elemento a {
         font-size: 1rem;
     }
+
+    .presentacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentacion__animacion {
+        order: 2;
+    }
+
+    .presentacion__foto {
+        width: 146px;
+        height: 146px;
+        order: 2;
+    }
+
+    .presentacion__contenedor {
+        width: 544px;
+    }
+
+    .dotted-circle {
+        height: 150px;
+        width: 150px;
+        right: 2px;
+        bottom: 6px;
+
+    }
+
+    .sobre-mi {
+        width: 724px;
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    .habilidades__lista {
+        justify-content: center;
+    }
+
+    .habilidades__elemento {
+        width: 224px;
+    }
+
+    .aficiones__lista {
+        justify-content: center;
+    }
+
+    .aficiones__elemento {
+        width: 224px;
+    }
+
+    .formacion__lista {
+        display: flex;
+    }
+
+    .formacion__icono {
+        height: 85px;
+    }
+
+    .proyectos {
+        width: 724px;
+        width: 724px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+
+    }
+
+    .contacto {
+        width: 724px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+
+    }
 }
 
 /* Pantallas grandes */
 @media (min-width: 1024px) {
+
     /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
     .cabecera__titulo {
         font-size: 1.8rem;
     }
 
+    .presentacion__foto {
+        width: 368px;
+        height: 368px;
+    }
+
+    .presentacion__animacion {
+        height: 370px;
+        width: 370px;
+    }
+
+    .dotted-circle {
+        height: 370px;
+        width: 370px;
+        right: 1px;
+        bottom: 2px;
+    }
+
+    .sobre-mi {
+        width: 1136px;
+        padding-left: 210px;
+    }
+
+    .sobre-mi__texto {
+        width: 751px;
+    }
+
     .navegacion__elemento a {
         font-size: 1.1rem;
+    }
+
+    .habilidades {
+        padding-left: 210px;
+        width: 1136px;
+    }
+
+    .habilidades__lista {
+        padding-left: 210px;
+
+    }
+
+    .aficiones {
+        width: 1136px;
+        padding-left: 210px;
+    }
+
+    .aficiones__lista {
+        padding-left: 210px;
+    }
+
+    .formacion {
+        width: 1136px;
+        padding-left: 210px;
+    }
+
+    .formacion__lista {
+        padding-left: 210px;
+    }
+
+    .proyectos {
+        width: 1136px;
+        padding-left: 210px;
+    }
+
+    .proyectos__contenedor {
+        width: 751px;
+    }
+
+    .contacto {
+        width: 1136px;
+        padding-left: 210px;
+    }
+
+    .contacto__formulario {
+        width: 751px;
+    }
+
+    .error-message {
+        font-size: 0.9em;
+        color: red;
+        margin-top: -8px;
+        margin-bottom: 8px;
+        display: block;
     }
 }
